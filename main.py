@@ -1,11 +1,11 @@
-from bot.get_from_bank import click_grapes, click_jug
+from bot.get_from_bank import click_grapes_bank, click_jug_bank
 from utils import pyautogui
 import time
 
 
 def main():
-    click_grapes()
-    click_jug()
+    click_grapes_bank()
+    click_jug_bank()
     pyautogui.press("esc")
 
 
