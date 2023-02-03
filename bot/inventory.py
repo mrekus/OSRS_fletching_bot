@@ -13,7 +13,7 @@ def click_grapes_inventory(x=randint(1455, 1459), y=randint(355, 358)):
     time.sleep(round(uniform(0.09, 0.12), 2))
 
 
-def click_jug_inventory(x=1458, y=394):
+def click_jug_inventory(x=randint(1455, 1459), y=randint(391, 396)):
     win32api.SetCursorPos((x, y))
     time.sleep(round(uniform(0.7, 0.8), 2))
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
