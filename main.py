@@ -1,8 +1,9 @@
 from bot.get_from_bank import click_grapes_bank, click_jug_bank
 from bot.inventory import click_grapes_inventory, click_jug_inventory
 from bot.deposit_to_bank import click_bank, deposit_wine
-from utils import pyautogui
+import pyautogui
 import time
+from random import randint
 
 
 def main():
@@ -14,7 +15,7 @@ def main():
         click_grapes_inventory()
         click_jug_inventory()
         pyautogui.press("space")
-        time.sleep(18)
+        time.sleep(randint(17, 18))
         click_bank()
         deposit_wine()
         time.sleep(1)
