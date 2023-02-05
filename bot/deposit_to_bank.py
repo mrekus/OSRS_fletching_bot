@@ -4,7 +4,7 @@ import time
 from random import randint, uniform
 
 
-def click_bank(x=randint(1264, 1269), y=randint(321, 324)):
+def click_bank(x=randint(939, 1015), y=randint(293, 333)):
     win32api.SetCursorPos((x, y))
     time.sleep(round(uniform(0.40, 0.49), 2))
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
@@ -13,7 +13,7 @@ def click_bank(x=randint(1264, 1269), y=randint(321, 324)):
     time.sleep(round(uniform(0.09, 0.12), 2))
 
 
-def deposit_wine(x=randint(1320, 1324), y=randint(334, 337)):
+def deposit_bows(x=randint(991, 1014), y=randint(324, 342)):
     win32api.SetCursorPos((x, y))
     time.sleep(round(uniform(0.40, 0.49), 2))
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
