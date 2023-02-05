@@ -10,7 +10,7 @@ from random import uniform
 def getShell():
     thelist = []
 
-    def findit(hwnd):
+    def findit(hwnd, ctx):
         if win32gui.GetWindowText(hwnd) == "RuneLite - Finex":  # check the title
             thelist.append(hwnd)
 
