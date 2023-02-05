@@ -7,18 +7,30 @@ import time
 from random import uniform
 
 
+def getShell():
+    thelist = []
+
+    def findit(hwnd):
+        if win32gui.GetWindowText(hwnd) == "RuneLite - Finex":  # check the title
+            thelist.append(hwnd)
+
+    win32gui.EnumWindows(findit, None)
+    return thelist[0]
+
+
 def main():
+    app_ID = getShell()
     while True:
         time.sleep(round(uniform(0.08, 0.12), 2))
         click_bow_bank()
         click_string_bank()
-        win32gui.SetForegroundWindow(656480)
+        win32gui.SetForegroundWindow(app_ID)
         pyautogui.press("esc")
         time.sleep(round(uniform(0.08, 0.12), 2))
         click_bow_inventory()
         click_string_inventory()
         time.sleep(round(uniform(0.7, 0.8), 2))
-        win32gui.SetForegroundWindow(656480)
+        win32gui.SetForegroundWindow(app_ID)
         pyautogui.press("space")
         time.sleep(round(uniform(17, 18), 2))
         click_bank()
