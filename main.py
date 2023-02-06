@@ -19,18 +19,18 @@ def getShell():
 
 
 def main():
-    app_ID = getShell()
+    app_id = getShell()
     while True:
         time.sleep(round(uniform(0.08, 0.12), 2))
         click_bow_bank()
         click_string_bank()
-        win32gui.SetForegroundWindow(app_ID)
+        win32gui.SetForegroundWindow(app_id)
         pyautogui.press("esc")
         time.sleep(round(uniform(0.08, 0.12), 2))
         click_bow_inventory()
         click_string_inventory()
         time.sleep(round(uniform(0.7, 0.8), 2))
-        win32gui.SetForegroundWindow(app_ID)
+        win32gui.SetForegroundWindow(app_id)
         pyautogui.press("space")
         time.sleep(round(uniform(17, 18), 2))
         click_bank()
