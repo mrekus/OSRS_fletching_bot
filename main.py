@@ -7,11 +7,11 @@ import time
 from random import uniform
 
 
-def getShell():
+def get_shell():
     thelist = []
 
-    def findit(hwnd, ctx):
-        if win32gui.GetWindowText(hwnd) == "RuneLite - Finex":  # check the title
+    def findit(hwnd, _ctx):
+        if win32gui.GetWindowText(hwnd) == "Enter Title":  # check the title
             thelist.append(hwnd)
 
     win32gui.EnumWindows(findit, None)
@@ -19,7 +19,7 @@ def getShell():
 
 
 def main():
-    app_id = getShell()
+    app_id = get_shell()
     while True:
         time.sleep(round(uniform(0.08, 0.12), 2))
         click_bow_bank()
