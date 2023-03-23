@@ -32,7 +32,7 @@ def main():
         time.sleep(round(uniform(0.7, 0.8), 2))
         win32gui.SetForegroundWindow(app_id)
         pyautogui.press("space")
-        time.sleep(round(uniform(17, 18), 2))
+        time.sleep(round(uniform(16.8, 17.2), 2))
         click_bank()
         time.sleep(round(uniform(0.2, 0.3), 2))
         deposit_bows()
